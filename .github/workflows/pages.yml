@@ -1,0 +1,48 @@
+# Publishes the app to GitHub Pages on every push to main.
+#
+# Why: the app needs a real http(s) origin — borrowed browser APIs (microphone /
+# speech recognition, and the on-device dictation engine's service worker) are
+# unavailable on file:// pages, and this gives the team one stable URL to demo.
+# `enablement: true` below turns Pages on for the repository if it is not on yet.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enable Pages (no-op once enabled)
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      # Only the app itself is published — no .git, no Actions metadata.
+      - name: Stage site
+        run: |
+          mkdir -p _site
+          rsync -a --exclude '.git' --exclude '.github' --exclude '.freebuff' --exclude '_site' ./ _site/
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4

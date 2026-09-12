@@ -1,0 +1,13 @@
+# Freebuff client workspace metadata (not part of the app)
+.freebuff/
+
+# OS / editor junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
+
+# The older, separate copy of this app that lives inside this folder — it has its
+# own .git and its own repository (dynamoadityam716-cpu/case-taking). Publishing
+# it here would nest one repository inside another.
+sih26047-software-newdb/
