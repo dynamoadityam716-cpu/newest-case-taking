@@ -11,3 +11,22 @@ Desktop.ini
 # own .git and its own repository (dynamoadityam716-cpu/case-taking). Publishing
 # it here would nest one repository inside another.
 sih26047-software-newdb/
+
+# ---- Live Match Tactics Agent -------------------------------------------
+# Pre-fetched StatsBomb payloads are heavy (multi-MB) and re-downloadable —
+# keep them local. The cleaned demo match is deliberately committed so the
+# demo needs zero network. The replay cache gets committed per-file later,
+# with an explicit negation, once the replay pass exists.
+match-tactics-agent/data/*.json
+!match-tactics-agent/data/match.json
+match-tactics-agent/data/raw/
+match-tactics-agent/cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Never commit API keys
+.env

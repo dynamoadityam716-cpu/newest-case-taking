@@ -1,0 +1,11 @@
+# Live Match Tactics Agent
+#
+# RUNTIME: the whole pipeline (fetch → agents → playback) is Python stdlib
+# only. There is nothing you must install to run it.
+#
+#   python fetch_data.py --list --matches-file 11/2
+#   python fetch_data.py --match 266033 --matches-file 11/2
+#   python playback.py --mock
+#
+# Optional convenience (NOT used by this project's code):
+statsbombpy>=1.0.0
