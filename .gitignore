@@ -15,12 +15,13 @@ sih26047-software-newdb/
 # ---- Live Match Tactics Agent -------------------------------------------
 # Pre-fetched StatsBomb payloads are heavy (multi-MB) and re-downloadable —
 # keep them local. The cleaned demo match is deliberately committed so the
-# demo needs zero network. The replay cache gets committed per-file later,
-# with an explicit negation, once the replay pass exists.
+# demo needs zero network. In the replay cache, only the pre-generated demo
+# match (266033) is committed; anything else stays local.
 match-tactics-agent/data/*.json
 !match-tactics-agent/data/match.json
 match-tactics-agent/data/raw/
-match-tactics-agent/cache/
+match-tactics-agent/cache/*
+!match-tactics-agent/cache/266033.json
 
 # Python
 __pycache__/

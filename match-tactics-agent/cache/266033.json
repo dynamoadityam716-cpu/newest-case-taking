@@ -1,0 +1,2860 @@
+{
+ "mode": "MOCK (rule-based fallback — no API key used)",
+ "pace": 1.5,
+ "generated_from": "match.json",
+ "generated_at": "2026-09-28T01:24:47",
+ "wall_seconds": 0.0,
+ "match": {
+  "match_id": 266033,
+  "competition": "La Liga",
+  "season": "2016/2017",
+  "match_date": "2016-10-22",
+  "home_team": "Valencia",
+  "away_team": "Barcelona",
+  "home_score": 2,
+  "away_score": 3
+ },
+ "state_trail": [
+  {
+   "t": 0.25,
+   "minute": 0,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.0,
+   "momentum_reading": "even",
+   "events_applied": 1,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 1.75,
+   "minute": 1,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.42,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 53,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 3.25,
+   "minute": 2,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.17,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 106,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 4.75,
+   "minute": 3,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.11,
+   "momentum_reading": "even",
+   "events_applied": 183,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 6.25,
+   "minute": 4,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.17,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 238,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 7.75,
+   "minute": 5,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.1,
+   "momentum_reading": "even",
+   "events_applied": 294,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 9.25,
+   "minute": 6,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.02,
+   "momentum_reading": "even",
+   "events_applied": 351,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 10.75,
+   "minute": 7,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.04,
+   "momentum_reading": "even",
+   "events_applied": 368,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 12.25,
+   "minute": 8,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.03,
+   "momentum_reading": "even",
+   "events_applied": 407,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 13.75,
+   "minute": 9,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.01,
+   "momentum_reading": "even",
+   "events_applied": 460,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 15.25,
+   "minute": 10,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.03,
+   "momentum_reading": "even",
+   "events_applied": 506,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 16.75,
+   "minute": 11,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.14,
+   "momentum_reading": "even",
+   "events_applied": 559,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 19.75,
+   "minute": 13,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.17,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 560,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 21.25,
+   "minute": 14,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.27,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 599,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 22.75,
+   "minute": 15,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.26,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 646,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 24.25,
+   "minute": 16,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.18,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 684,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 25.75,
+   "minute": 17,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.19,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 718,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 27.25,
+   "minute": 18,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.14,
+   "momentum_reading": "even",
+   "events_applied": 744,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 28.75,
+   "minute": 19,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.02,
+   "momentum_reading": "even",
+   "events_applied": 814,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 30.25,
+   "minute": 20,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 0
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.04,
+   "momentum_reading": "even",
+   "events_applied": 858,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    }
+   }
+  },
+  {
+   "t": 31.75,
+   "minute": 21,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.06,
+   "momentum_reading": "even",
+   "events_applied": 899,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 1,
+     "on_target": 1,
+     "goals": 1,
+     "xg": 0.05
+    }
+   }
+  },
+  {
+   "t": 33.25,
+   "minute": 22,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.06,
+   "momentum_reading": "even",
+   "events_applied": 901,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 1,
+     "on_target": 1,
+     "goals": 1,
+     "xg": 0.05
+    }
+   }
+  },
+  {
+   "t": 34.75,
+   "minute": 23,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.1,
+   "momentum_reading": "even",
+   "events_applied": 902,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 1,
+     "on_target": 1,
+     "goals": 1,
+     "xg": 0.05
+    }
+   }
+  },
+  {
+   "t": 36.25,
+   "minute": 24,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.31,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 929,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 1,
+     "on_target": 1,
+     "goals": 1,
+     "xg": 0.05
+    }
+   }
+  },
+  {
+   "t": 37.75,
+   "minute": 25,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.51,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 968,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 1,
+     "on_target": 1,
+     "goals": 1,
+     "xg": 0.05
+    }
+   }
+  },
+  {
+   "t": 39.25,
+   "minute": 26,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.39,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 1022,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 1,
+     "on_target": 1,
+     "goals": 1,
+     "xg": 0.05
+    }
+   }
+  },
+  {
+   "t": 40.75,
+   "minute": 27,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.33,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 1064,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 1,
+     "on_target": 1,
+     "goals": 1,
+     "xg": 0.05
+    }
+   }
+  },
+  {
+   "t": 42.25,
+   "minute": 28,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.31,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 1075,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 1,
+     "on_target": 1,
+     "goals": 1,
+     "xg": 0.05
+    }
+   }
+  },
+  {
+   "t": 43.75,
+   "minute": 29,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.32,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 1121,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 1,
+     "on_target": 1,
+     "goals": 1,
+     "xg": 0.05
+    }
+   }
+  },
+  {
+   "t": 45.25,
+   "minute": 30,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.38,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 1221,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 3,
+     "on_target": 2,
+     "goals": 1,
+     "xg": 0.21
+    }
+   }
+  },
+  {
+   "t": 46.75,
+   "minute": 31,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.39,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 1223,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 3,
+     "on_target": 2,
+     "goals": 1,
+     "xg": 0.21
+    }
+   }
+  },
+  {
+   "t": 48.25,
+   "minute": 32,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.35,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 1273,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 3,
+     "on_target": 2,
+     "goals": 1,
+     "xg": 0.21
+    }
+   }
+  },
+  {
+   "t": 49.75,
+   "minute": 33,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.35,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 1304,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 3,
+     "on_target": 2,
+     "goals": 1,
+     "xg": 0.21
+    }
+   }
+  },
+  {
+   "t": 51.25,
+   "minute": 34,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.29,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 1346,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 3,
+     "on_target": 2,
+     "goals": 1,
+     "xg": 0.21
+    }
+   }
+  },
+  {
+   "t": 52.75,
+   "minute": 35,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.28,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 1425,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 1,
+     "xg": 0.33
+    }
+   }
+  },
+  {
+   "t": 55.75,
+   "minute": 37,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.35,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 1484,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 0,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0
+    },
+    "Barcelona": {
+     "shots": 5,
+     "on_target": 4,
+     "goals": 1,
+     "xg": 0.5
+    }
+   }
+  },
+  {
+   "t": 57.25,
+   "minute": 38,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.17,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 1497,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 1,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0.02
+    },
+    "Barcelona": {
+     "shots": 5,
+     "on_target": 4,
+     "goals": 1,
+     "xg": 0.5
+    }
+   }
+  },
+  {
+   "t": 58.75,
+   "minute": 39,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.16,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 1540,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 1,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0.02
+    },
+    "Barcelona": {
+     "shots": 5,
+     "on_target": 4,
+     "goals": 1,
+     "xg": 0.5
+    }
+   }
+  },
+  {
+   "t": 60.25,
+   "minute": 40,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.11,
+   "momentum_reading": "even",
+   "events_applied": 1562,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 1,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0.02
+    },
+    "Barcelona": {
+     "shots": 5,
+     "on_target": 4,
+     "goals": 1,
+     "xg": 0.5
+    }
+   }
+  },
+  {
+   "t": 61.75,
+   "minute": 41,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.06,
+   "momentum_reading": "even",
+   "events_applied": 1595,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 1,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0.02
+    },
+    "Barcelona": {
+     "shots": 5,
+     "on_target": 4,
+     "goals": 1,
+     "xg": 0.5
+    }
+   }
+  },
+  {
+   "t": 63.25,
+   "minute": 42,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.06,
+   "momentum_reading": "even",
+   "events_applied": 1644,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 1,
+     "on_target": 0,
+     "goals": 0,
+     "xg": 0.02
+    },
+    "Barcelona": {
+     "shots": 5,
+     "on_target": 4,
+     "goals": 1,
+     "xg": 0.5
+    }
+   }
+  },
+  {
+   "t": 64.75,
+   "minute": 43,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.09,
+   "momentum_reading": "even",
+   "events_applied": 1739,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 2,
+     "on_target": 1,
+     "goals": 0,
+     "xg": 0.32
+    },
+    "Barcelona": {
+     "shots": 5,
+     "on_target": 4,
+     "goals": 1,
+     "xg": 0.5
+    }
+   }
+  },
+  {
+   "t": 66.25,
+   "minute": 44,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.15,
+   "momentum_reading": "even",
+   "events_applied": 1751,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 2,
+     "on_target": 1,
+     "goals": 0,
+     "xg": 0.32
+    },
+    "Barcelona": {
+     "shots": 5,
+     "on_target": 4,
+     "goals": 1,
+     "xg": 0.5
+    }
+   }
+  },
+  {
+   "t": 67.75,
+   "minute": 45,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.01,
+   "momentum_reading": "even",
+   "events_applied": 1894,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 2,
+     "on_target": 1,
+     "goals": 0,
+     "xg": 0.32
+    },
+    "Barcelona": {
+     "shots": 6,
+     "on_target": 4,
+     "goals": 1,
+     "xg": 0.6
+    }
+   }
+  },
+  {
+   "t": 69.25,
+   "minute": 46,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.04,
+   "momentum_reading": "even",
+   "events_applied": 1923,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 2,
+     "on_target": 1,
+     "goals": 0,
+     "xg": 0.32
+    },
+    "Barcelona": {
+     "shots": 6,
+     "on_target": 4,
+     "goals": 1,
+     "xg": 0.6
+    }
+   }
+  },
+  {
+   "t": 70.75,
+   "minute": 47,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.1,
+   "momentum_reading": "even",
+   "events_applied": 1949,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 2,
+     "on_target": 1,
+     "goals": 0,
+     "xg": 0.32
+    },
+    "Barcelona": {
+     "shots": 6,
+     "on_target": 4,
+     "goals": 1,
+     "xg": 0.6
+    }
+   }
+  },
+  {
+   "t": 72.25,
+   "minute": 48,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.1,
+   "momentum_reading": "even",
+   "events_applied": 1991,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 2,
+     "on_target": 1,
+     "goals": 0,
+     "xg": 0.32
+    },
+    "Barcelona": {
+     "shots": 6,
+     "on_target": 4,
+     "goals": 1,
+     "xg": 0.6
+    }
+   }
+  },
+  {
+   "t": 73.75,
+   "minute": 49,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.05,
+   "momentum_reading": "even",
+   "events_applied": 2093,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 2,
+     "on_target": 1,
+     "goals": 0,
+     "xg": 0.32
+    },
+    "Barcelona": {
+     "shots": 8,
+     "on_target": 6,
+     "goals": 1,
+     "xg": 0.79
+    }
+   }
+  },
+  {
+   "t": 75.25,
+   "minute": 50,
+   "period": 0,
+   "score": {
+    "Valencia": 0,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.01,
+   "momentum_reading": "even",
+   "events_applied": 2105,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 2,
+     "on_target": 1,
+     "goals": 0,
+     "xg": 0.32
+    },
+    "Barcelona": {
+     "shots": 8,
+     "on_target": 6,
+     "goals": 1,
+     "xg": 0.79
+    }
+   }
+  },
+  {
+   "t": 76.75,
+   "minute": 51,
+   "period": 0,
+   "score": {
+    "Valencia": 1,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.14,
+   "momentum_reading": "even",
+   "events_applied": 2208,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 3,
+     "on_target": 2,
+     "goals": 1,
+     "xg": 0.42
+    },
+    "Barcelona": {
+     "shots": 8,
+     "on_target": 6,
+     "goals": 1,
+     "xg": 0.79
+    }
+   }
+  },
+  {
+   "t": 79.75,
+   "minute": 53,
+   "period": 0,
+   "score": {
+    "Valencia": 1,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.16,
+   "momentum_reading": "clear momentum with Valencia",
+   "events_applied": 2210,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 3,
+     "on_target": 2,
+     "goals": 1,
+     "xg": 0.42
+    },
+    "Barcelona": {
+     "shots": 8,
+     "on_target": 6,
+     "goals": 1,
+     "xg": 0.79
+    }
+   }
+  },
+  {
+   "t": 81.25,
+   "minute": 54,
+   "period": 0,
+   "score": {
+    "Valencia": 1,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.14,
+   "momentum_reading": "even",
+   "events_applied": 2270,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 3,
+     "on_target": 2,
+     "goals": 1,
+     "xg": 0.42
+    },
+    "Barcelona": {
+     "shots": 8,
+     "on_target": 6,
+     "goals": 1,
+     "xg": 0.79
+    }
+   }
+  },
+  {
+   "t": 82.75,
+   "minute": 55,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.34,
+   "momentum_reading": "clear momentum with Valencia",
+   "events_applied": 2333,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 8,
+     "on_target": 6,
+     "goals": 1,
+     "xg": 0.79
+    }
+   }
+  },
+  {
+   "t": 84.25,
+   "minute": 56,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.3,
+   "momentum_reading": "clear momentum with Valencia",
+   "events_applied": 2335,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 8,
+     "on_target": 6,
+     "goals": 1,
+     "xg": 0.79
+    }
+   }
+  },
+  {
+   "t": 85.75,
+   "minute": 57,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.3,
+   "momentum_reading": "clear momentum with Valencia",
+   "events_applied": 2336,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 8,
+     "on_target": 6,
+     "goals": 1,
+     "xg": 0.79
+    }
+   }
+  },
+  {
+   "t": 87.25,
+   "minute": 58,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.29,
+   "momentum_reading": "clear momentum with Valencia",
+   "events_applied": 2388,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 8,
+     "on_target": 6,
+     "goals": 1,
+     "xg": 0.79
+    }
+   }
+  },
+  {
+   "t": 88.75,
+   "minute": 59,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.33,
+   "momentum_reading": "clear momentum with Valencia",
+   "events_applied": 2404,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 8,
+     "on_target": 6,
+     "goals": 1,
+     "xg": 0.79
+    }
+   }
+  },
+  {
+   "t": 90.25,
+   "minute": 60,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 1
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.25,
+   "momentum_reading": "clear momentum with Valencia",
+   "events_applied": 2449,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 8,
+     "on_target": 6,
+     "goals": 1,
+     "xg": 0.79
+    }
+   }
+  },
+  {
+   "t": 91.75,
+   "minute": 61,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.13,
+   "momentum_reading": "even",
+   "events_applied": 2499,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 10,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.95
+    }
+   }
+  },
+  {
+   "t": 93.25,
+   "minute": 62,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.11,
+   "momentum_reading": "even",
+   "events_applied": 2505,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 10,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.95
+    }
+   }
+  },
+  {
+   "t": 94.75,
+   "minute": 63,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.12,
+   "momentum_reading": "even",
+   "events_applied": 2541,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 10,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.95
+    }
+   }
+  },
+  {
+   "t": 96.25,
+   "minute": 64,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.07,
+   "momentum_reading": "even",
+   "events_applied": 2595,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 10,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.95
+    }
+   }
+  },
+  {
+   "t": 97.75,
+   "minute": 65,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.09,
+   "momentum_reading": "even",
+   "events_applied": 2645,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 10,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.95
+    }
+   }
+  },
+  {
+   "t": 99.25,
+   "minute": 66,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.11,
+   "momentum_reading": "even",
+   "events_applied": 2706,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 10,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.95
+    }
+   }
+  },
+  {
+   "t": 100.75,
+   "minute": 67,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.05,
+   "momentum_reading": "even",
+   "events_applied": 2740,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 10,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.95
+    }
+   }
+  },
+  {
+   "t": 102.25,
+   "minute": 68,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.05,
+   "momentum_reading": "even",
+   "events_applied": 2808,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 10,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.95
+    }
+   }
+  },
+  {
+   "t": 105.25,
+   "minute": 70,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.31,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 2858,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 11,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.97
+    }
+   }
+  },
+  {
+   "t": 106.75,
+   "minute": 71,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.34,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 2859,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 11,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.97
+    }
+   }
+  },
+  {
+   "t": 108.25,
+   "minute": 72,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.2,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 2912,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 11,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.97
+    }
+   }
+  },
+  {
+   "t": 109.75,
+   "minute": 73,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.25,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 2955,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 11,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.97
+    }
+   }
+  },
+  {
+   "t": 111.25,
+   "minute": 74,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.07,
+   "momentum_reading": "even",
+   "events_applied": 2980,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 11,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.97
+    }
+   }
+  },
+  {
+   "t": 114.25,
+   "minute": 76,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.08,
+   "momentum_reading": "even",
+   "events_applied": 3033,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 12,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.99
+    }
+   }
+  },
+  {
+   "t": 115.75,
+   "minute": 77,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.1,
+   "momentum_reading": "even",
+   "events_applied": 3122,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 12,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.99
+    }
+   }
+  },
+  {
+   "t": 117.25,
+   "minute": 78,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.12,
+   "momentum_reading": "even",
+   "events_applied": 3129,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 12,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.99
+    }
+   }
+  },
+  {
+   "t": 118.75,
+   "minute": 79,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.2,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 3148,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 12,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.99
+    }
+   }
+  },
+  {
+   "t": 120.25,
+   "minute": 80,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.24,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 3188,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 4,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.67
+    },
+    "Barcelona": {
+     "shots": 12,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.99
+    }
+   }
+  },
+  {
+   "t": 121.75,
+   "minute": 81,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.01,
+   "momentum_reading": "even",
+   "events_applied": 3271,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 5,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.81
+    },
+    "Barcelona": {
+     "shots": 12,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 0.99
+    }
+   }
+  },
+  {
+   "t": 123.25,
+   "minute": 82,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.13,
+   "momentum_reading": "even",
+   "events_applied": 3315,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 5,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.81
+    },
+    "Barcelona": {
+     "shots": 13,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 1.05
+    }
+   }
+  },
+  {
+   "t": 124.75,
+   "minute": 83,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.22,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 3357,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 5,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.81
+    },
+    "Barcelona": {
+     "shots": 14,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 1.19
+    }
+   }
+  },
+  {
+   "t": 126.25,
+   "minute": 84,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.16,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 3368,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 5,
+     "on_target": 3,
+     "goals": 2,
+     "xg": 0.81
+    },
+    "Barcelona": {
+     "shots": 14,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 1.19
+    }
+   }
+  },
+  {
+   "t": 127.75,
+   "minute": 85,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.06,
+   "momentum_reading": "even",
+   "events_applied": 3419,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 7,
+     "on_target": 4,
+     "goals": 2,
+     "xg": 1.04
+    },
+    "Barcelona": {
+     "shots": 14,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 1.19
+    }
+   }
+  },
+  {
+   "t": 129.25,
+   "minute": 86,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.09,
+   "momentum_reading": "even",
+   "events_applied": 3441,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 7,
+     "on_target": 4,
+     "goals": 2,
+     "xg": 1.04
+    },
+    "Barcelona": {
+     "shots": 14,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 1.19
+    }
+   }
+  },
+  {
+   "t": 130.75,
+   "minute": 87,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.03,
+   "momentum_reading": "even",
+   "events_applied": 3499,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 7,
+     "on_target": 4,
+     "goals": 2,
+     "xg": 1.04
+    },
+    "Barcelona": {
+     "shots": 14,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 1.19
+    }
+   }
+  },
+  {
+   "t": 132.25,
+   "minute": 88,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.04,
+   "momentum_reading": "even",
+   "events_applied": 3512,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 7,
+     "on_target": 4,
+     "goals": 2,
+     "xg": 1.04
+    },
+    "Barcelona": {
+     "shots": 14,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 1.19
+    }
+   }
+  },
+  {
+   "t": 133.75,
+   "minute": 89,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.14,
+   "momentum_reading": "even",
+   "events_applied": 3546,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 7,
+     "on_target": 4,
+     "goals": 2,
+     "xg": 1.04
+    },
+    "Barcelona": {
+     "shots": 14,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 1.19
+    }
+   }
+  },
+  {
+   "t": 135.25,
+   "minute": 90,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": 0.21,
+   "momentum_reading": "clear momentum with Valencia",
+   "events_applied": 3579,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 7,
+     "on_target": 4,
+     "goals": 2,
+     "xg": 1.04
+    },
+    "Barcelona": {
+     "shots": 14,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 1.19
+    }
+   }
+  },
+  {
+   "t": 136.75,
+   "minute": 91,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 2
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.08,
+   "momentum_reading": "even",
+   "events_applied": 3609,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 7,
+     "on_target": 4,
+     "goals": 2,
+     "xg": 1.04
+    },
+    "Barcelona": {
+     "shots": 14,
+     "on_target": 8,
+     "goals": 2,
+     "xg": 1.19
+    }
+   }
+  },
+  {
+   "t": 139.75,
+   "minute": 93,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 3
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.13,
+   "momentum_reading": "even",
+   "events_applied": 3674,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 7,
+     "on_target": 4,
+     "goals": 2,
+     "xg": 1.04
+    },
+    "Barcelona": {
+     "shots": 15,
+     "on_target": 9,
+     "goals": 3,
+     "xg": 1.97
+    }
+   }
+  },
+  {
+   "t": 142.75,
+   "minute": 95,
+   "period": 0,
+   "score": {
+    "Valencia": 2,
+    "Barcelona": 3
+   },
+   "formations": {
+    "Valencia": "4231",
+    "Barcelona": "433"
+   },
+   "momentum": -0.36,
+   "momentum_reading": "clear momentum with Barcelona",
+   "events_applied": 3679,
+   "shot_totals": {
+    "Valencia": {
+     "shots": 7,
+     "on_target": 4,
+     "goals": 2,
+     "xg": 1.04
+    },
+    "Barcelona": {
+     "shots": 15,
+     "on_target": 9,
+     "goals": 3,
+     "xg": 1.97
+    }
+   }
+  }
+ ],
+ "timeline": [
+  {
+   "minute": 13,
+   "clock": "13'",
+   "score": "0-0",
+   "category": "substitution",
+   "weight": 6,
+   "team": "Barcelona",
+   "commentary": "Substitution, Barcelona: Ivan Rakitić replaces Andrés Iniesta Luján. Bench decision revealing the coach's read of the game state",
+   "reasoning": "Barcelona change at 13': Andrés Iniesta Luján makes way for Ivan Rakitić. Score-level or ahead — likely freshness or a specific matchup fix.",
+   "tactical_meaning": "Bench decision revealing the coach's read of the game state.",
+   "watch_for": "Formation or press intensity shift within 10 minutes of the change.",
+   "t": 20.5
+  },
+  {
+   "minute": 21,
+   "clock": "21'",
+   "score": "0-1",
+   "category": "goal",
+   "weight": 9,
+   "team": "Barcelona",
+   "commentary": "GOAL Barcelona — Lionel Andrés Messi Cuccittini. Forces the trailing side out of its structure; expect immediate chase mode",
+   "reasoning": "Goal for Barcelona in the 21' — it's now Valencia 0-1 Barcelona. Game state resets for both benches with momentum even. It arrived from a chance worth just xG 0.052 — finish overcame the opportunity.",
+   "tactical_meaning": "Forces the trailing side out of its structure; expect immediate chase mode.",
+   "watch_for": "Next 5 minutes: does the conceding team press higher or retreat?",
+   "t": 32.5
+  },
+  {
+   "minute": 37,
+   "clock": "37'",
+   "score": "0-1",
+   "category": "substitution",
+   "weight": 6,
+   "team": "Valencia",
+   "commentary": "Substitution, Valencia: Aymen Abdennour replaces José Luis Gayà Peña. Bench decision revealing the coach's read of the game state",
+   "reasoning": "Valencia change at 37': José Luis Gayà Peña makes way for Aymen Abdennour. They are trailing, so this reads as a push for the game.",
+   "tactical_meaning": "Bench decision revealing the coach's read of the game state.",
+   "watch_for": "Formation or press intensity shift within 10 minutes of the change.",
+   "t": 56.5
+  },
+  {
+   "minute": 43,
+   "clock": "43'",
+   "score": "0-1",
+   "category": "big_chance",
+   "weight": 6,
+   "team": "Valencia",
+   "commentary": "Big chance for Daniel Parejo Muñoz (Valencia) — saved. Signals a repeating supply route the defence has not solved yet",
+   "reasoning": "Huge chance for Valencia at 43' (xG 0.308) — Saved. The chance creation pattern matters more than the miss.",
+   "tactical_meaning": "Signals a repeating supply route the defence has not solved yet.",
+   "watch_for": "Same combination again inside 10 minutes?",
+   "t": 65.5
+  },
+  {
+   "minute": 45,
+   "clock": "45'",
+   "score": "0-1",
+   "category": "substitution",
+   "weight": 6,
+   "team": "Valencia",
+   "commentary": "Substitution, Valencia: Munir El Haddadi Mohamed replaces Martín Montoya Torralbo. Bench decision revealing the coach's read of the game state",
+   "reasoning": "Valencia change at 45': Martín Montoya Torralbo makes way for Munir El Haddadi Mohamed. They are trailing, so this reads as a push for the game.",
+   "tactical_meaning": "Bench decision revealing the coach's read of the game state.",
+   "watch_for": "Formation or press intensity shift within 10 minutes of the change.",
+   "t": 68.5
+  },
+  {
+   "minute": 45,
+   "clock": "45'",
+   "score": "0-1",
+   "category": "formation",
+   "weight": 7,
+   "team": "Valencia",
+   "commentary": "Valencia reshape → 4231. Coach actively restructuring to attack a perceived weakness or protect a lead",
+   "reasoning": "Valencia reshapes from 4231 to 4231 at 45'. Formations rarely change without a reason — look at what just happened.",
+   "tactical_meaning": "Coach actively restructuring to attack a perceived weakness or protect a lead.",
+   "watch_for": "Which zone gains numbers next; full-back positions are the tell.",
+   "t": 68.5
+  },
+  {
+   "minute": 51,
+   "clock": "51'",
+   "score": "1-1",
+   "category": "goal",
+   "weight": 9,
+   "team": "Valencia",
+   "commentary": "GOAL Valencia — Munir El Haddadi Mohamed. Forces the trailing side out of its structure; expect immediate chase mode",
+   "reasoning": "Goal for Valencia in the 51' — it's now Valencia 1-1 Barcelona. Game state resets for both benches with momentum even. It arrived from a chance worth just xG 0.093 — finish overcame the opportunity.",
+   "tactical_meaning": "Forces the trailing side out of its structure; expect immediate chase mode.",
+   "watch_for": "Next 5 minutes: does the conceding team press higher or retreat?",
+   "t": 77.5
+  },
+  {
+   "minute": 55,
+   "clock": "55'",
+   "score": "2-1",
+   "category": "goal",
+   "weight": 9,
+   "team": "Valencia",
+   "commentary": "GOAL Valencia — Rodrigo Moreno Machado. Forces the trailing side out of its structure; expect immediate chase mode",
+   "reasoning": "Goal for Valencia in the 55' — it's now Valencia 2-1 Barcelona. Game state resets for both benches and the last five minutes ran 34% to one side.",
+   "tactical_meaning": "Forces the trailing side out of its structure; expect immediate chase mode.",
+   "watch_for": "Next 5 minutes: does the conceding team press higher or retreat?",
+   "t": 83.5
+  },
+  {
+   "minute": 61,
+   "clock": "61'",
+   "score": "2-2",
+   "category": "goal",
+   "weight": 9,
+   "team": "Barcelona",
+   "commentary": "GOAL Barcelona — Luis Alberto Suárez Díaz. Forces the trailing side out of its structure; expect immediate chase mode",
+   "reasoning": "Goal for Barcelona in the 61' — it's now Valencia 2-2 Barcelona. Game state resets for both benches with momentum even. It arrived from a chance worth just xG 0.045 — finish overcame the opportunity.",
+   "tactical_meaning": "Forces the trailing side out of its structure; expect immediate chase mode.",
+   "watch_for": "Next 5 minutes: does the conceding team press higher or retreat?",
+   "t": 92.5
+  },
+  {
+   "minute": 70,
+   "clock": "70'",
+   "score": "2-2",
+   "category": "substitution",
+   "weight": 6,
+   "team": "Valencia",
+   "commentary": "Substitution, Valencia: Santiago Mina Lorenzo replaces Rodrigo Moreno Machado. Bench decision revealing the coach's read of the game state",
+   "reasoning": "Valencia change at 70': Rodrigo Moreno Machado makes way for Santiago Mina Lorenzo. Score-level or ahead — likely freshness or a specific matchup fix.",
+   "tactical_meaning": "Bench decision revealing the coach's read of the game state.",
+   "watch_for": "Formation or press intensity shift within 10 minutes of the change.",
+   "t": 106.0
+  },
+  {
+   "minute": 71,
+   "clock": "71'",
+   "score": "2-2",
+   "category": "substitution",
+   "weight": 6,
+   "team": "Barcelona",
+   "commentary": "Substitution, Barcelona: Denis Suárez Fernández replaces André Filipe Tavares Gomes. Bench decision revealing the coach's read of the game state",
+   "reasoning": "Barcelona change at 71': André Filipe Tavares Gomes makes way for Denis Suárez Fernández. Score-level or ahead — likely freshness or a specific matchup fix.",
+   "tactical_meaning": "Bench decision revealing the coach's read of the game state.",
+   "watch_for": "Formation or press intensity shift within 10 minutes of the change.",
+   "t": 107.5
+  },
+  {
+   "minute": 77,
+   "clock": "77'",
+   "score": "2-2",
+   "category": "formation",
+   "weight": 7,
+   "team": "Valencia",
+   "commentary": "Valencia reshape → 4231. Coach actively restructuring to attack a perceived weakness or protect a lead",
+   "reasoning": "Valencia reshapes from 4231 to 4231 at 77'. Formations rarely change without a reason — look at what just happened.",
+   "tactical_meaning": "Coach actively restructuring to attack a perceived weakness or protect a lead.",
+   "watch_for": "Which zone gains numbers next; full-back positions are the tell.",
+   "t": 116.5
+  },
+  {
+   "minute": 93,
+   "clock": "93'",
+   "score": "2-3",
+   "category": "goal",
+   "weight": 9,
+   "team": "Barcelona",
+   "commentary": "GOAL Barcelona — Lionel Andrés Messi Cuccittini. Forces the trailing side out of its structure; expect immediate chase mode",
+   "reasoning": "Goal for Barcelona in the 93' — it's now Valencia 2-3 Barcelona. Game state resets for both benches with momentum even.",
+   "tactical_meaning": "Forces the trailing side out of its structure; expect immediate chase mode.",
+   "watch_for": "Next 5 minutes: does the conceding team press higher or retreat?",
+   "t": 140.5
+  }
+ ]
+}
