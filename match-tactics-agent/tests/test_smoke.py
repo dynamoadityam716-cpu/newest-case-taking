@@ -178,6 +178,74 @@ def test_end_to_end_instant():
     print(f"ok  end-to-end instant run ({len(timeline)} entries, {sorted(categories)})")
 
 
+def test_server_surface():
+    """The real HTTP surface: MatchServer + time-gated Broadcast."""
+    import threading
+    import time as _t
+    import urllib.request
+    import playback
+
+    match = _load_match()
+    args = playback.parse_args(["--mock", "--pace", "0.4"])
+    payload = playback.build_replay_cache(match, args)
+    # re-load the cache from disk and shrink its reveal times so the test can
+    # observe time-gating without waiting — mutations go through the FILE,
+    # mirroring the committed format (entries keep their t stamps in cache)
+    cache_file = playback.cache_path_for(match)
+    payload = json.loads(cache_file.read_text(encoding="utf-8"))
+    for e in payload["timeline"]:
+        e["t"] = 0.02
+    for s in payload["state_trail"]:
+        s["t"] = 0.005
+    cache_file.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+    payload = playback.load_replay_cache(match, args)
+    broadcast = playback._broadcast_from_cache(match, payload, args)
+    assert broadcast.counts()[0] == 13
+    # same-pace load must honor the file's (shrunken) stamps verbatim
+    assert broadcast.entries[0]["t"] == 0.02
+    # a different serve pace re-stamps from match minutes (cadence adjustable)
+    restamped = playback._broadcast_from_cache(match, payload, playback.parse_args(["--mock", "--pace", "0.8"]))
+    assert restamped.entries[-1]["t"] == round(restamped.entries[-1]["minute"] * 0.8 + 1.0, 3)
+    # deterministic full-time flip: 0.6s after broadcast creation
+    broadcast.finish_t = 0.6
+    _t.sleep(0.15)  # now comfortably past every reveal time
+
+    server = playback.MatchServer(match, broadcast, port=0, agent_mode="TEST-MODE")
+    port = server.httpd.server_address[1]
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    try:
+        base = f"http://127.0.0.1:{port}"
+        def get(path):
+            with urllib.request.urlopen(base + path, timeout=5) as r:
+                return r.status, r.headers.get("Content-Type", ""), json.loads(r.read().decode("utf-8"))
+        code, ct, meta = get("/api/meta")
+        assert code == 200 and meta["agent_mode"] == "TEST-MODE" and "utf-8" in ct
+        code, ct, tl = get("/api/timeline")
+        assert code == 200 and tl["total_entries"] == 13 and tl["visible_entries"] == 13
+        assert set(tl["entries"][0]) >= {"minute", "clock", "category", "weight", "commentary",
+                                          "reasoning", "tactical_meaning", "watch_for", "t"}
+        code, ct, st = get("/api/state")
+        assert code == 200 and st["state"]["minute"] >= 0 and "momentum" in st["state"]
+        # the root serves the HTML UI, not JSON
+        with urllib.request.urlopen(base + "/", timeout=5) as r:
+            assert r.status == 200 and "text/html" in r.headers.get("Content-Type", "")
+            assert b"Live Match Tactics Agent" in r.read()
+        try:
+            urllib.request.urlopen(base + "/api/nope", timeout=5)
+            raise AssertionError("expected 404")
+        except urllib.error.HTTPError as err:
+            assert err.code == 404
+        _t.sleep(0.6)  # now >= finish_t (0.6s) → the replay full-time flip
+        code, ct, tl = get("/api/timeline")
+        assert tl["finished"] is True
+    finally:
+        server.stop()
+    # leave the committed cache canonical (fresh, pace 1.5, untampered stamps)
+    playback.build_replay_cache(match, playback.parse_args(["--mock", "--pace", "1.5"]))
+    print("ok  http surface (/api/meta, /api/timeline gating, /api/state, /, 404, full-time flip)")
+
+
 if __name__ == "__main__":
     test_extract_json()
     test_state()
@@ -185,4 +253,5 @@ if __name__ == "__main__":
     test_verdict_hardening()
     test_narrator_fallback()
     test_end_to_end_instant()
+    test_server_surface()
     print("\nALL SMOKE TESTS PASS")

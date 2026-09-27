@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Match Tactics Agent</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='10' fill='%230d1420'/><text x='12' y='16' font-size='12' text-anchor='middle'>⚽</text></svg>">
+<style>
+  :root {
+    --bg: #0b1017;
+    --panel: #111a26;
+    --panel2: #0e1621;
+    --line: #1e2b3d;
+    --ink: #e8eef5;
+    --dim: #8ea0b5;
+    --faint: #5d6f85;
+    --home: #37b2ff;
+    --away: #ff7a59;
+    --gold: #d9a441;
+    --green: #3ecf8e;
+    --red: #ff5d6c;
+    --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: radial-gradient(1200px 500px at 50% -10%, #14202e 0%, var(--bg) 60%);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, Inter, sans-serif;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 20px 18px 60px; }
+
+  header { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+  .kicker { font-family: var(--mono); font-size: 11px; letter-spacing: 2px; color: var(--gold); }
+  h1 { font-size: 19px; font-weight: 650; letter-spacing: 0.2px; }
+  .badges { margin-left: auto; display: flex; gap: 8px; }
+  .badge {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 1px;
+    padding: 3px 8px; border: 1px solid var(--line); border-radius: 999px; color: var(--dim);
+  }
+  .badge.mode { color: var(--gold); border-color: #4a3d1e; }
+
+  /* scoreboard */
+  .scoreboard {
+    display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px;
+    background: linear-gradient(180deg, var(--panel) 0%, var(--panel2) 100%);
+    border: 1px solid var(--line); border-radius: 14px; padding: 18px 22px;
+  }
+  .team { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .team.away { align-items: flex-end; text-align: right; }
+  .team .name { font-weight: 700; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .team .formation {
+    font-family: var(--mono); font-size: 12px; color: var(--dim);
+    padding: 2px 8px; border: 1px solid var(--line); border-radius: 6px; width: fit-content;
+  }
+  .team.away .formation { align-self: flex-end; }
+  .team.home .formation { border-color: rgba(55,178,255,.35); color: var(--home); }
+  .team.away .formation { border-color: rgba(255,122,89,.35); color: var(--away); }
+  .team.reshaped .formation::after { content: " *"; color: var(--gold); }
+  .middle { text-align: center; min-width: 170px; }
+  .score { font-family: var(--mono); font-size: 34px; font-weight: 700; letter-spacing: 2px; }
+  .clock { font-family: var(--mono); font-size: 12px; color: var(--dim); margin-top: 2px; }
+  .clock b { color: var(--ink); font-size: 15px; }
+  .stage { margin-top: 10px; }
+  .stagebar { height: 4px; border-radius: 2px; background: var(--line); overflow: hidden; }
+  .stagefill { height: 100%; width: 0%; background: var(--gold); transition: width .6s linear; }
+  .stagemeta { display: flex; justify-content: space-between; margin-top: 4px;
+    font-family: var(--mono); font-size: 10px; color: var(--faint); }
+
+  /* momentum */
+  .momentum { margin-top: 14px; }
+  .momentum-head { display: flex; justify-content: space-between; font-family: var(--mono);
+    font-size: 10px; color: var(--faint); letter-spacing: 1px; margin-bottom: 5px; }
+  .mombar { position: relative; height: 10px; border-radius: 5px; overflow: hidden;
+    background: #101926; border: 1px solid var(--line); }
+  .mombar .half { position: absolute; top: 0; bottom: 0; width: 50%; }
+  .mombar .half.away { left: 0; background: linear-gradient(90deg, rgba(255,122,89,.42), rgba(255,122,89,.16)); }
+  .mombar .half.home { right: 0; background: linear-gradient(270deg, rgba(55,178,255,.42), rgba(55,178,255,.16)); }
+  .mombar .needle { position: absolute; top: -1px; bottom: -1px; width: 3px; border-radius: 2px;
+    background: var(--gold); box-shadow: 0 0 8px rgba(217,164,65,.8);
+    transition: left .5s ease; }
+  .momval { font-family: var(--mono); font-size: 11px; color: var(--dim); margin-top: 5px; text-align: center; }
+
+  /* timeline */
+  .timeline-head { display: flex; align-items: baseline; gap: 10px; margin: 22px 2px 8px; }
+  .timeline-head h2 { font-size: 13px; font-family: var(--mono); letter-spacing: 2px; color: var(--dim); }
+  .timeline-head .count { font-family: var(--mono); font-size: 11px; color: var(--faint); }
+  .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green);
+    box-shadow: 0 0 6px var(--green); animation: pulse 1.4s infinite; }
+  .live-dot.done { background: var(--faint); box-shadow: none; animation: none; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+
+  .entries { display: flex; flex-direction: column; gap: 8px; }
+  .entry {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    overflow: hidden; animation: rise .35s ease;
+  }
+  @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .entry > summary {
+    list-style: none; cursor: pointer; display: flex; gap: 12px; align-items: center;
+    padding: 10px 14px;
+  }
+  .entry > summary::-webkit-details-marker { display: none; }
+  .entry > summary:hover { background: #141f2d; }
+  .min { font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--dim); min-width: 38px; }
+  .cat { width: 26px; height: 26px; border-radius: 7px; display: grid; place-items: center;
+    font-size: 13px; flex: none; }
+  .cat.goal { background: rgba(62,207,142,.15); }
+  .cat.red_card { background: rgba(255,93,108,.15); }
+  .cat.penalty { background: rgba(217,164,65,.15); }
+  .cat.formation { background: rgba(55,178,255,.15); }
+  .cat.substitution { background: rgba(142,160,181,.12); }
+  .cat.big_chance { background: rgba(217,164,65,.12); }
+  .cat.momentum_swing { background: rgba(62,207,142,.1); }
+  .sumline { flex: 1; min-width: 0; }
+  .sumline .headline { font-size: 13.5px; }
+  .sumline .meta { font-family: var(--mono); font-size: 10px; color: var(--faint); margin-top: 2px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .wgt { font-family: var(--mono); font-size: 10px; color: var(--dim); border: 1px solid var(--line);
+    border-radius: 5px; padding: 1px 6px; }
+  .chev { color: var(--faint); font-size: 11px; transition: transform .2s; }
+  .entry[open] .chev { transform: rotate(180deg); }
+
+  .detail { border-top: 1px solid var(--line); padding: 12px 16px 14px; display: grid; gap: 9px; }
+  .detail .row { display: grid; grid-template-columns: 118px 1fr; gap: 10px; }
+  .detail .k { font-family: var(--mono); font-size: 10px; letter-spacing: 1px; color: var(--faint);
+    padding-top: 2px; }
+  .detail .v { font-size: 13px; line-height: 1.5; color: var(--ink); }
+  .detail .v.dim { color: var(--dim); }
+
+  .empty { border: 1px dashed var(--line); border-radius: 10px; padding: 26px; text-align: center;
+    color: var(--faint); font-size: 13px; }
+  .empty .mono { font-family: var(--mono); font-size: 11px; margin-top: 6px; display: block; }
+  footer { margin-top: 26px; text-align: center; font-family: var(--mono); font-size: 10px;
+    color: var(--faint); letter-spacing: 1px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="kicker">// MATCH TACTICS AGENT</span>
+    <h1>Live tactical timeline</h1>
+    <div class="badges">
+      <span class="badge" id="agentMode">AGENT MODE —</span>
+      <span class="badge" id="liveBadge">LIVE</span>
+    </div>
+  </header>
+
+  <section class="scoreboard">
+    <div class="team home">
+      <span class="name" id="homeName">—</span>
+      <span class="formation" id="homeForm">——</span>
+    </div>
+    <div class="middle">
+      <div class="score" id="score">0–0</div>
+      <div class="clock"><b id="minute">0'</b> · <span id="periodInfo">kick-off</span></div>
+      <div class="stage">
+        <div class="stagebar"><div class="stagefill" id="stageFill"></div></div>
+        <div class="stagemeta"><span>0'</span><span id="progPct">0%</span><span>96'</span></div>
+      </div>
+    </div>
+    <div class="team away">
+      <span class="name" id="awayName">—</span>
+      <span class="formation" id="awayForm">——</span>
+    </div>
+  </section>
+
+  <section class="momentum">
+    <div class="momentum-head"><span>◀ AWAY ROLLING</span><span>MOMENTUM · LAST 5 MIN</span><span>HOME ROLLING ▶</span></div>
+    <div class="mombar">
+      <div class="half away"></div>
+      <div class="half home"></div>
+      <div class="needle" id="momNeedle" style="left:50%"></div>
+    </div>
+    <div class="momval" id="momVal">even</div>
+  </section>
+
+  <div class="timeline-head">
+    <span class="live-dot" id="liveDot"></span>
+    <h2>TACTICAL TIMELINE</h2>
+    <span class="count" id="entryCount">0 entries</span>
+  </div>
+
+  <div class="entries" id="entries">
+    <div class="empty" id="empty">Waiting for the agent's first judgment…
+      <span class="mono">the reasoner rejects most candidate events — entries appear when it rules a moment significant</span>
+    </div>
+  </div>
+
+  <footer>REASONING OVER STRUCTURED EVENT DATA — NOT SENTIMENT ANALYSIS</footer>
+</div>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const state = { entries: [], finished: false, mode: "" };
+  const CAT_ICON = { goal: "⚽", red_card: "🟥", penalty: "❗", formation: "⟐",
+                     substitution: "⇄", big_chance: "△", momentum_swing: "≈" };
+  const CAT_LABEL = { goal: "GOAL", red_card: "RED CARD", penalty: "PENALTY", formation: "FORMATION",
+                      substitution: "SUBSTITUTION", big_chance: "BIG CHANCE", momentum_swing: "MOMENTUM" };
+
+  function fmtScore(scoreObj, home, away) {
+    if (!scoreObj || typeof scoreObj !== "object") return "0–0";
+    const h = scoreObj[home] ?? 0, a = scoreObj[away] ?? 0;
+    return `${h}–${a}`;
+  }
+
+  function renderState(st, match) {
+    if (!st || st.t === undefined) return;
+    $("homeName").textContent = match.home_team || "—";
+    $("awayName").textContent = match.away_team || "—";
+    $("score").textContent = fmtScore(st.score, match.home_team, match.away_team);
+    const minute = st.minute ?? 0;
+    $("minute").textContent = `${minute}'`;
+    $("periodInfo").textContent = st.period === 2 ? "2nd half" : (minute >= 46 ? "2nd half" : "1st half");
+    const prog = Math.max(0, Math.min(100, (minute / 96) * 100));
+    $("stageFill").style.width = prog + "%";
+    $("progPct").textContent = Math.round(prog) + "%";
+    const forms = st.formations || {};
+    const hf = forms[match.home_team], af = forms[match.away_team];
+    $("homeForm").textContent = hf || "——";
+    $("awayForm").textContent = af || "——";
+    $("homeForm").parentElement.classList.toggle("reshaped", !!hf);
+    $("awayForm").parentElement.classList.toggle("reshaped", !!af);
+    const mom = st.momentum ?? 0;
+    $("momNeedle").style.left = (50 + mom * 47) + "%";
+    $("momVal").textContent = st.momentum_reading || (Math.abs(mom) < 0.15 ? "even" : mom.toFixed(2));
+  }
+
+  function entryNode(e, match) {
+    const details = document.createElement("details");
+    details.className = "entry";
+    details.dataset.id = `${e.minute}-${e.category}-${e.team}`;
+    const icon = CAT_ICON[e.category] || "•";
+    const label = CAT_LABEL[e.category] || (e.category || "moment").toUpperCase();
+    const scoreAt = e.score || "";
+    const who = e.team ? ` · ${e.team}` : "";
+    details.innerHTML = `
+      <summary>
+        <span class="min">${e.clock || (e.minute + "'")}</span>
+        <span class="cat ${e.category || ""}">${icon}</span>
+        <span class="sumline">
+          <span class="headline">${escapeHtml(e.commentary || e.reasoning || label)}</span>
+          <span class="meta">${label}${who}${scoreAt ? " · " + escapeHtml(scoreAt) : ""} · weight ${e.weight ?? "?"}/10</span>
+        </span>
+        <span class="chev">▾</span>
+      </summary>
+      <div class="detail">
+        <div class="row"><span class="k">VERDICT</span><span class="v">significant · weight ${e.weight ?? "?"}/10 · ${label}</span></div>
+        <div class="row"><span class="k">REASONING</span><span class="v">${escapeHtml(e.reasoning || "—")}</span></div>
+        <div class="row"><span class="k">TACTICAL MEANING</span><span class="v dim">${escapeHtml(e.tactical_meaning || "—")}</span></div>
+        <div class="row"><span class="k">WATCH FOR</span><span class="v dim">${escapeHtml(e.watch_for || "—")}</span></div>
+      </div>`;
+    return details;
+  }
+
+  function escapeHtml(s) {
+    return String(s ?? "").replace(/[&<>"']/g, (c) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  }
+
+  function syncEntries() {
+    const box = $("entries");
+    const existing = new Set([...box.querySelectorAll(".entry")].map(n => n.dataset.id));
+    let added = false;
+    for (const e of state.entries) {
+      const id = `${e.minute}-${e.category}-${e.team}`;
+      if (existing.has(id)) continue;
+      box.appendChild(entryNode(e, state.match));
+      existing.add(id);
+      added = true;
+    }
+    const empty = $("empty");
+    if (state.entries.length) { if (empty) empty.remove(); }
+    $("entryCount").textContent = `${state.entries.length} entries`;
+    // auto-scroll so the newest action is in view (unless the reader scrolled up)
+    if (added && nearBottom()) {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    }
+  }
+
+  function nearBottom() {
+    return (window.innerHeight + window.scrollY) >= document.body.scrollHeight - 220;
+  }
+
+  function setFinished() {
+    if (state.finished) return;
+    state.finished = true;
+    $("liveDot").classList.add("done");
+    $("liveBadge").textContent = "FULL TIME";
+    $("liveBadge").style.color = "var(--dim)";
+  }
+
+  async function jget(url) {
+    const r = await fetch(url, { cache: "no-store" });
+    if (!r.ok) throw new Error(`${url} → ${r.status}`);
+    return r.json();
+  }
+
+  async function tick() {
+    try {
+      const [st, tl] = await Promise.all([jget("/api/state"), jget("/api/timeline")]);
+      state.match = st.match || state.match;
+      if (!state.mode && st.match) { /* mode badge filled by /api/meta below */ }
+      renderState(st.state, st.match);
+      state.entries = tl.entries || [];
+      syncEntries();
+      if (st.finished) setFinished();
+    } catch (err) {
+      // server restarting? keep polling quietly
+      console.warn("poll failed:", err.message);
+    }
+  }
+
+  async function loadMeta() {
+    try {
+      const meta = await jget("/api/meta");
+      $("agentMode").textContent = "AGENT MODE — " + (meta.agent_mode || "UNKNOWN");
+      state.mode = meta.agent_mode || "";
+    } catch (err) { /* badge stays generic */ }
+  }
+
+  tick();
+  loadMeta();
+  setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>
