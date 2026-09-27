@@ -65,6 +65,11 @@ python playback.py --pace 1.5    # auto-uses Gemini when a key is present
 export ANTHROPIC_API_KEY=...     # or Claude; LLM_PROVIDER=claude forces it
 python playback.py --llm         # fail fast if no key is configured
 
+#    ...or skip env vars entirely: put the key in a git-ignored `.env`
+#    (copy `.env.example` to the repo root or this folder):
+#      GEMINI_API_KEY=AIza...
+#    Existing environment variables always win over the file.
+
 # 4) served demo with the browser UI
 python playback.py --replay --pace 1.5 --port 8017   # deterministic (pre-generated)
 python playback.py --live   --pace 1.5 --port 8017   # agents run while you watch

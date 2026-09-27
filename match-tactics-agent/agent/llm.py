@@ -1,7 +1,9 @@
 """Provider-agnostic LLM client for the Tactical Reasoner / Narrator.
 
 Priority: GEMINI_API_KEY (free tier, per plan) → ANTHROPIC_API_KEY (the
-brief's pick). `LLM_PROVIDER=claude|gemini` overrides. With no key at all,
+brief's pick). `LLM_PROVIDER=claude|gemini` overrides. Keys come from the
+environment or, if absent, are auto-loaded from a git-ignored `.env` file
+(project root or repo root — see load_dotenv). With no key at all,
 `available_provider()` returns None and callers fall back to the rule-based
 mock (agent/mock.py) — the pipeline must run keyless.
 
@@ -15,6 +17,7 @@ import os
 import time
 import urllib.error
 import urllib.request
+from pathlib import Path
 
 GEMINI_MODELS = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"]
 CLAUDE_MODELS = ["claude-sonnet-4-5", "claude-3-5-haiku-latest", "claude-3-5-sonnet-latest"]
@@ -25,6 +28,42 @@ _ATTEMPTS_PER_MODEL = 2
 
 class LLMError(RuntimeError):
     pass
+
+
+def load_dotenv() -> dict[str, str]:
+    """Load KEY=VALUE pairs into os.environ from the first .env found.
+
+    Search order: the project root, then the parent repo root (so the key
+    works from either working directory). Existing environment variables
+    always win — the file only fills gaps. Only KEY=VALUE lines and #/blank
+    lines are handled; values are taken verbatim (quotes stripped). Never
+    raises: a missing/unreadable .env just means no keys from this source.
+    """
+    here = Path(__file__).resolve().parent
+    loaded: dict[str, str] = {}
+    for candidate in (here.parent, here.parent.parent):
+        path = candidate / ".env"
+        if not path.is_file():
+            continue
+        try:
+            for raw in path.read_text(encoding="utf-8").splitlines():
+                line = raw.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                key, _, value = line.partition("=")
+                key, value = key.strip(), value.strip()
+                if len(value) >= 2 and value[0] == value[-1] and value[0] in "\"'":
+                    value = value[1:-1]
+                if key and key not in os.environ:
+                    os.environ[key] = value
+                    loaded[key] = value
+        except OSError:
+            return loaded
+        return loaded
+    return loaded
+
+
+load_dotenv()
 
 
 def available_provider() -> str | None:
