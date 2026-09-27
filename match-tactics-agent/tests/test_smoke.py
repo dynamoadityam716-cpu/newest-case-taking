@@ -186,13 +186,15 @@ def test_server_surface():
     import playback
 
     match = _load_match()
+    cache_file = playback.cache_path_for(match)
+    # snapshot the committed cache bytes FIRST — the test regenerates and
+    # tampers with this file, and must restore it exactly (no churn)
+    original_bytes = cache_file.read_bytes()
     args = playback.parse_args(["--mock", "--pace", "0.4"])
     payload = playback.build_replay_cache(match, args)
-    # re-load the cache from disk and shrink its reveal times so the test can
-    # observe time-gating without waiting — mutations go through the FILE,
-    # mirroring the committed format (entries keep their t stamps in cache)
-    cache_file = playback.cache_path_for(match)
-    payload = json.loads(cache_file.read_text(encoding="utf-8"))
+    payload = json.loads(cache_file.read_bytes().decode("utf-8"))
+    # shrink reveal times so the test can observe time-gating without waiting —
+    # mutations go through the FILE, mirroring the committed format
     for e in payload["timeline"]:
         e["t"] = 0.02
     for s in payload["state_trail"]:
@@ -241,8 +243,9 @@ def test_server_surface():
         assert tl["finished"] is True
     finally:
         server.stop()
-    # leave the committed cache canonical (fresh, pace 1.5, untampered stamps)
-    playback.build_replay_cache(match, playback.parse_args(["--mock", "--pace", "1.5"]))
+    # restore the exact pre-test bytes — running the tests must not dirty the
+    # working tree (a regenerate would rewrite the generated_at timestamp)
+    cache_file.write_bytes(original_bytes)
     print("ok  http surface (/api/meta, /api/timeline gating, /api/state, /, 404, full-time flip)")
 
 
